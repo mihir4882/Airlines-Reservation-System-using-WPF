@@ -1,0 +1,67 @@
+﻿<Window x:Class="Midterm_Airlines.AirlineWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm_Airlines"
+        mc:Ignorable="d"
+        Title="AirlineWindow" Height="415" Width="690" Closing="Close_Window">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem x:Name="EditMenu" Header="Edit">
+                <MenuItem Header="Insert" FontFamily="Arial" Click="Insert_Click"/>
+                <MenuItem Header="Update" FontFamily="Arial" Click="Update_Click"/>
+                <MenuItem Header="Delete" FontFamily="Arial" Click="Delete_Click"/>
+            </MenuItem>
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Grid Background="LightBlue">
+        <DockPanel LastChildFill="False" Margin="0,0,0,350">
+            <Menu x:Name="HMenu" Height="25" Width="690" Background="#FF4388C0">
+                <MenuItem x:Name="File" Header="File" FontFamily="Arial" Height="24">
+                    <MenuItem x:Name="New" Header="New" FontFamily="Arial"/>
+                    <MenuItem x:Name="Save" Header="Save" FontFamily="Arial"/>
+                    <MenuItem x:Name="Quit" Header="Quit" FontFamily="Arial" Click="Quit_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="Edit" Header="Edit" FontFamily="Arial" Height="24">
+                    <MenuItem Header="Insert" FontFamily="Arial" Click="Insert_Click"/>
+                    <MenuItem Header="Update" FontFamily="Arial" Click="Update_Click"/>
+                    <MenuItem Header="Delete" FontFamily="Arial" Click="Delete_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="Help" Header="Help" FontFamily="Arial" Height="24" Click="Help_Click"/>
+            </Menu>
+        </DockPanel>
+        <Grid Margin="0,87,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tb_name" HorizontalAlignment="Left" Margin="144,25,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="24" FontSize="14" FontFamily="Arial"/>
+            <TextBox x:Name="tb_seat" HorizontalAlignment="Left" Margin="144,0,0,0"  TextWrapping="Wrap" VerticalAlignment="Center" Width="165" Height="24" FontSize="14" FontFamily="Arial"/>
+            
+            <Label Content="Select Meal:" Grid.Column="1" HorizontalAlignment="Left" Margin="36,21,0,0" VerticalAlignment="Top" FontFamily="Arial" Background="#FF96F355" FontWeight="Bold"/>
+            <RadioButton x:Name="Meal1" Content="Veg" Grid.Column="1" HorizontalAlignment="Left" Margin="50,53,0,0" VerticalAlignment="Top" GroupName="rb_Meal"/>
+            <RadioButton x:Name="Meal2" Content="Non-Veg" Grid.Column="1" HorizontalAlignment="Left" Margin="50,78,0,0" VerticalAlignment="Top" GroupName="rb_Meal"/>
+            <RadioButton x:Name="Meal3" Content="Mexican Food" Grid.Column="1" HorizontalAlignment="Left" Margin="50,102,0,0" VerticalAlignment="Top" GroupName="rb_Meal"/>
+            
+            <Label Content="Select Airplane:" Grid.Column="1" HorizontalAlignment="Left" Margin="204,21,0,0" VerticalAlignment="Top" FontFamily="Arial" Background="#FF96F355" FontWeight="Bold"/>
+                <RadioButton x:Name="Airline1" Content="Airbus A380" Grid.Column="1" HorizontalAlignment="Left" Margin="215,57,0,0" VerticalAlignment="Top" GroupName="rb_Airline"/>
+            <RadioButton x:Name="Airline2" Content="Boeing 777" Grid.Column="1" HorizontalAlignment="Left" Margin="215,78,0,0" VerticalAlignment="Top" GroupName="rb_Airline"/>
+            <RadioButton x:Name="Airline3" Content="Boeing 747-8" Grid.Column="1" HorizontalAlignment="Left" Margin="215,102,0,0" VerticalAlignment="Top" GroupName="rb_Airline"/>
+
+            <Button x:Name="Addbtn" Content="Add" HorizontalAlignment="Left" Margin="144,18,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="27" Click="Addbtn_Click"/>
+            <Button x:Name="Updatebtn" Content="Update" HorizontalAlignment="Left" Margin="144,60,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="27" Click="Updatebtn_Click"/>
+            <Button x:Name="Deletebtn" Content="Delete" HorizontalAlignment="Left" Margin="144,103,0,0" Grid.Row="1" VerticalAlignment="Top" Width="67" Height="27" Click="Deletebtn_Click"/>
+
+            <ListBox x:Name="airline_list" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding}" SelectionChanged="airline_list_SelectionChanged" Margin="18,14,18,13" FontFamily="Arial" FontSize="14"/>
+
+        </Grid>
+        <Label Content="Airline Details" HorizontalAlignment="Center" Margin="0,56,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="636" FontFamily="Arial" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Airline Name:" HorizontalAlignment="Left" Margin="47,107,0,0" VerticalAlignment="Top" Width="97" FontSize="14"/>
+        <Label Content="Seat Available:" HorizontalAlignment="Left" Margin="35,156,0,0" VerticalAlignment="Top" Width="109" FontFamily="Arial" FontSize="14"/>
+    </Grid>
+</Window>

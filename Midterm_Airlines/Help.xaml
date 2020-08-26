@@ -1,0 +1,14 @@
+﻿<Window x:Class="Midterm_Airlines.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm_Airlines"
+        mc:Ignorable="d"
+        Title="Help" Height="410" Width="700">
+    <Grid Background="LightBlue">
+        <Label Content="About Us" HorizontalAlignment="Left" Margin="100,46,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="524" Height="51" FontFamily="Arial" FontSize="18" FontWeight="Bold" Background="#FF7CE48A"/>
+        <Label Content="The Airline reservation system is an application which helps you to view customer details, flight details, &#xD;&#xA;passenger info, Flight details, Airline details.&#xD;&#xA;&#xD;&#xA;This application was launched in 2020&#xD;&#xA;For any inqury Contact - us at mihir@gmail.com&#xD;&#xA;Contact number- 6471115555 " HorizontalAlignment="Left" Margin="49,146,0,0" VerticalAlignment="Top" 
+               Width="627" Height="193" FontFamily="Arial" FontSize="16"/>
+    </Grid>
+</Window>

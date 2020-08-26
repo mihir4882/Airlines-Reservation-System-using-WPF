@@ -1,0 +1,61 @@
+﻿<Window x:Class="Midterm_Airlines.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm_Airlines"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="433" Width="620" Closing="Close_Window" Background= "#C5C4C2" >
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem x:Name="File_Menu" Header="File">
+                <MenuItem x:Name="New_Home" Header="New" FontSize="12"/>
+                <MenuItem x:Name="Save_Home" Header="Save"/>
+                <MenuItem x:Name="Quit_Home" Header="Quit" Click="Quit_Click" FontSize="12"/>
+            </MenuItem>
+            <MenuItem x:Name="Edit_Menu" Header="Edit">
+                <MenuItem Header="Insert"/>
+                <MenuItem Header="Update"/>
+                <MenuItem Header="Delete"/>
+            </MenuItem>
+            <MenuItem x:Name="View_Menu" Header="View">
+                <MenuItem x:Name="Customers_view" Header="Customers" Click="Customers_Click" FontSize="12"/>
+                <MenuItem x:Name="Airlines_view" Header="Airlines" Click="Airlines_Click" FontSize="12"/>
+                <MenuItem x:Name="Flights_view" Header="Flights" Click="Flights_Click" FontSize="12"/>
+                <MenuItem x:Name="Passengers_view" Header="Passengers" Click="Passengers_Click" FontSize="12"/>
+            </MenuItem>
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Grid Background="LightBlue">
+        <DockPanel LastChildFill="False" Margin="0,0,0,359"/>
+        <Menu x:Name="HMenu" Height="25" Margin="0,0,0,373" Background="#FF4388C0">
+            <MenuItem x:Name="File" Header="File" FontFamily="Arial" Height="24">
+                <MenuItem x:Name="New" Header="New" FontFamily="Arial"/>
+                <MenuItem x:Name="Save" Header="Save" FontFamily="Arial"/>
+                <MenuItem x:Name="Quit" Header="Quit" FontFamily="Arial" Click="Quit_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="Edit" Header="Edit" FontFamily="Arial" Height="24">
+                <MenuItem Header="Insert" FontFamily="Arial"/>
+                <MenuItem Header="Update" FontFamily="Arial"/>
+                <MenuItem Header="Delete" FontFamily="Arial"/>
+            </MenuItem>
+            <MenuItem x:Name="View" Header="View" FontFamily="Arial" Height="24">
+                <MenuItem x:Name="Customers" Header="Customers" Click="Customers_Click" FontFamily="Arial"/>
+                <MenuItem x:Name="Airlines" Header="Airlines" Click="Airlines_Click" FontFamily="Arial"/>
+                <MenuItem x:Name="Flights" Header="Flights" Click="Flights_Click" FontFamily="Arial"/>
+                <MenuItem x:Name="Passengers" Header="Passengers" Click="Passengers_Click" FontFamily="Arial"/>
+            </MenuItem>
+            <MenuItem x:Name="Help" Header="Help" FontFamily="Arial" Height="24" Click="Help_Click"/>
+        </Menu>
+        <Label Content="Welcome To Airlines Reservation System" HorizontalAlignment="Left" Margin="20,199,0,0" VerticalAlignment="Top" Width="593" Height="38" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="59,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55" Width="521" FontFamily="Arial"><Run Text="Welcome to our airline service and reservation system. We are here to provide you one of the quick and best airline services to all the customers. Customers can explore our services by clicking on the below given "/><Run Language="en-ca" Text="pages."/></TextBlock>
+        <StackPanel Margin="0,300,0,0" Orientation="Horizontal" Background="#FF4388C0">
+            <Button x:Name="Custbtn" Content="Customers" Height="32" Margin="31,000" Width="81" FontWeight="Bold" FontSize="14" Background="#FFF76439" Foreground="#FF13100F" BorderBrush="White" Click="Custbtn_Click" FontFamily="Arial"/>
+            <Button x:Name="Airbtn" Content="Airlines" Height="32" Margin="31,000" Width="81" FontWeight="Bold" FontSize="14" Background="#FFF76439" Foreground="#FF13100F" BorderBrush="White" Click="Airbtn_Click" FontFamily="Arial"/>
+            <Button x:Name="Flightbtn" Content="Flights" Height="32" Margin="31,000" Width="81" FontWeight="Bold" FontSize="14" Background="#FFF76439" Foreground="#FF13100F" BorderBrush="White" Click="Flightbtn_Click" FontFamily="Arial"/>
+            <Button x:Name="Passengerbtn" Content="Passengers" Height="32" Margin="31,000" Width="81" FontWeight="Bold" FontSize="14" Background="#FFF76439" Foreground="#FF13100F" BorderBrush="White" Click="Passengerbtn_Click" FontFamily="Arial"/>
+        </StackPanel>
+        <Image Source="/airline2.jpg" HorizontalAlignment="Left" Height="122" Margin="325,58,0,0" VerticalAlignment="Top" Width="219"/>
+        <Image Source="/airline.jpg" HorizontalAlignment="Left" Height="120" Margin="42,59,0,0" VerticalAlignment="Top" Width="214"/>
+    </Grid>
+</Window>
